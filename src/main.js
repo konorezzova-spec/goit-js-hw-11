@@ -1,8 +1,6 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
-// import axios from "axios";
-import { getImagesByQuery } from "./js/pixabay-api";
-// import { createGallery, clearGallery, showLoader, hideLoader } from './js/render-functions';
+// import { getImagesByQuery } from "./js/pixabay-api";
 
 const searchForm = document.querySelector(".form");
 
@@ -21,6 +19,5 @@ function handleSubmit(event) {
         return;
     }
 
-    getImagesByQuery(input);
-
+    // getImagesByQuery(input);
 }

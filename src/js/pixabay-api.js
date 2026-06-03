@@ -1,7 +1,7 @@
-
+export { getImagesByQuery };
 import { createGallery, clearGallery, showLoader, hideLoader } from './js/render-functions';
 
-export function getImagesByQuery(query) { 
+function getImagesByQuery(query) { 
     const API_KEY = '49108638-27579a6dba88847264bd73f39';
     return axios.get(`https://pixabay.com/api/, {
         params: {

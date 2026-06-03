@@ -2,7 +2,9 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 
-export function createGallery(images) { 
+export { createGallery, clearGallery, showLoader, hideLoader };
+    
+function createGallery(images) { 
     if (images.hits.length === 0) {
         iziToast.error({
             title: "Error",
@@ -13,8 +15,8 @@ export function createGallery(images) {
 
 }
 
-export function clearGallery() { }
+function clearGallery() { }
 
-export function showLoader() { }
+function showLoader() { }
 
-export function hideLoader() { }
+function hideLoader() { }
