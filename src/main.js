@@ -1,6 +1,9 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
-// import { getImagesByQuery } from "./js/pixabay-api";
+import { getImagesByQuery } from "./js/pixabay-api";
+import { clearGallery, hideLoader } from "./js/render-functions";
+
+hideLoader();
 
 const searchForm = document.querySelector(".form");
 
@@ -13,11 +16,16 @@ function handleSubmit(event) {
 
     if (input === "") {
         iziToast.error({
+            position: 'topRight',
+            theme: 'dark',
             title: "Error",
             message: "Please enter a search query.",
+            backgroundColor: '#EF4040',
         });
         return;
     }
-
-    // getImagesByQuery(input);
+    clearGallery();
+    
+    getImagesByQuery(input);
+    
 }
